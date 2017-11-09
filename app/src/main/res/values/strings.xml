@@ -8,10 +8,8 @@
 
     <!-- Navigation Drawer menu labels -->
     <string name="nav_home">Beranda</string>
-    <string name="nav_lowongan">Materi</string>
-    <string name="nav_kuning">Latihan Soal</string>
-    <string name="nav_profil">Profil</string>
-    <string name="nav_daftarpustaka">Daftar Pustaka</string>
+    <string name="nav_lowongan">Lowongan Perkerjaan</string>
+    <string name="nav_kuning">Kartu Pencari Kerja</string>
     <string name="nav_petunjukaplikasi">Petunjuk Aplikasi</string>
 
 
@@ -26,10 +24,8 @@
     <!-- Toolbar titles when navigation menu item is selected -->
     <string-array name="nav_item_activity_titles">
         <item>Beranda</item>
-        <item>Materi</item>
-        <item>Latihan Soal</item>
-        <item>Profil</item>
-        <item>Daftar Pustaka</item>
+        <item>Info Lowongan</item>
+        <item>Kartu Kuning</item>
     </string-array>
 
     <string name="activity_title_about_us">About Us</string>
