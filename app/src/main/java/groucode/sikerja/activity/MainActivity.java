@@ -115,22 +115,22 @@ public class MainActivity extends AppCompatActivity {
      */
     private void loadNavHeader() {
         // name, website
-        txtName.setText("Badminton Apps");
-        txtWebsite.setText("Aplikasi Pembelajaran Bulu Tangkis");
+        txtName.setText("Sikerja");
+        txtWebsite.setText("Sistem Informasi Lowongan Kerja");
 
         // loading header background image
-        Glide.with(this).load(urlNavHeaderBg)
-                .crossFade()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(imgNavHeaderBg);
-
-        // Loading profile image
-        Glide.with(this).load(urlProfileImg)
-                .crossFade()
-                .thumbnail(0.5f)
-                .bitmapTransform(new CircleTransform(this))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(imgProfile);
+//        Glide.with(this).load(urlNavHeaderBg)
+//                .crossFade()
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(imgNavHeaderBg);
+//
+//        // Loading profile image
+//        Glide.with(this).load(urlProfileImg)
+//                .crossFade()
+//                .thumbnail(0.5f)
+//                .bitmapTransform(new CircleTransform(this))
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(imgProfile);
 
         // showing dot next to notifications label
         navigationView.getMenu().getItem(3).setActionView(R.layout.menu_dot);
