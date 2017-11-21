@@ -42,4 +42,7 @@
     <string name="font_family_condensed">sans-serif-condensed</string>
     <string name="font_family_black">sans-serif-black</string>
     <string name="font_family_thin">sans-serif-thin</string>
+
+    <string name="FCM_PREF">raditya.kejarimpw.fcm_pref</string>
+    <string name="FCM_TOKEN">raditya.kejarimpw.fcm_token</string>
 </resources>

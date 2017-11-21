@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "899447311685",
+    "firebase_url": "https://sikerja-40da5.firebaseio.com",
+    "project_id": "sikerja-40da5",
+    "storage_bucket": "sikerja-40da5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899447311685:android:d84421ac0a6553e5",
+        "android_client_info": {
+          "package_name": "groucode.sikerja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899447311685-djtka4354d07sn2ms9e22n1plhitp5rd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "groucode.sikerja",
+            "certificate_hash": "f5d15bacebae1b0cad33ad4b07db1a0a21d89d87"
+          }
+        },
+        {
+          "client_id": "899447311685-kdfl1rlq72a660gp73p2sp8gl0jsn3t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHoCDPaYuDK-1tF7qSug6_2XRk0agibF0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899447311685-kdfl1rlq72a660gp73p2sp8gl0jsn3t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
