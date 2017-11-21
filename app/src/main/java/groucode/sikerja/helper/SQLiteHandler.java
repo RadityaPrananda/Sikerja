@@ -15,12 +15,16 @@ public class SQLiteHandler extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION = 1;
 
-    private static final String DATABASE_NAME = "xcloudsy_arsipsurat";
+    private static final String DATABASE_NAME = "tryn6646_sikerja";
 
     private static final String TABLE_USER = "user";
 
     private static final String KEY_ID = "id";
-    private static final String KEY_NIP = "nip";
+    private static final String KEY_NIK = "nik";
+    private static final String KEY_NAMA = "nama";
+    private static final String KEY_EMAIL = "email";
+    private static final String KEY_TOKEN = "token";
+
 
     public SQLiteHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -28,8 +32,8 @@ public class SQLiteHandler extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db){
-//        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NIP + " TEXT UNIQUE," + KEY_NAMA + " TEXT," + KEY_NRP + " TEXT," + KEY_TTL + " TEXT," + KEY_AGAMA + " TEXT," + KEY_JK + " TEXT," + KEY_ALAMAT + " TEXT," + KEY_PENDIDIKAN + " TEXT," + KEY_GOLRU + " TEXT," + KEY_PANGKAT + " TEXT," + KEY_STRUKTURAL + " TEXT," + KEY_FUNGSIONAL + " TEXT," + KEY_TMT_JAKSA + " TEXT," + KEY_PASSWORD + " TEXT" + ")";
-//        db.execSQL(CREATE_LOGIN_TABLE);
+        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NIK + " TEXT UNIQUE," + KEY_NAMA + " TEXT," + KEY_EMAIL + " TEXT," + KEY_TOKEN + " TEXT" + ")";
+        db.execSQL(CREATE_LOGIN_TABLE);
 
         Log.d(TAG, "Database tables created");
     }
@@ -42,13 +46,14 @@ public class SQLiteHandler extends SQLiteOpenHelper{
     }
 
 
-    public void addUser(String nip, String nama, String nrp, String ttl, String agama, String jk, String alamat, String pendidikan, String golru, String pangkat, String struktural, String fungsional, String tmt_jaksa, String password ){
+    public void addUser(String nik, String nama, String email, String token){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NIP, nip);
-
-
+        values.put(KEY_NIK, nik);
+        values.put(KEY_NAMA, nama);
+        values.put(KEY_EMAIL, email);
+        values.put(KEY_TOKEN, token);
         long uid = db.insert(TABLE_USER, null, values);
         db.close();
 
@@ -65,21 +70,10 @@ public class SQLiteHandler extends SQLiteOpenHelper{
 
         cursor.moveToFirst();
         if (cursor.getCount() > 0){
-            user.put("nip", cursor.getString(1));
+            user.put("nik", cursor.getString(1));
             user.put("nama", cursor.getString(2));
-            user.put("nrp", cursor.getString(3));
-            user.put("ttl", cursor.getString(4));
-            user.put("agama", cursor.getString(5));
-            user.put("jk", cursor.getString(6));
-            user.put("alamat", cursor.getString(7));
-            user.put("pendidikan", cursor.getString(8));
-            user.put("golru", cursor.getString(9));
-            user.put("pangkat", cursor.getString(10));
-            user.put("struktural", cursor.getString(11));
-            user.put("fungsional", cursor.getString(12));
-            user.put("tmt_jaksa", cursor.getString(13));
-            user.put("password", cursor.getString(14));
-
+            user.put("email", cursor.getString(3));
+            user.put("token", cursor.getString(4));
         }
         cursor.close();
         db.close();
