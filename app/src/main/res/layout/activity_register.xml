@@ -18,22 +18,97 @@
         >
 
         <ImageView
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="20dp"
             android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_height="60dp"
             android:background="#00a2e9"
-            android:src="@drawable/logo"/>
-
-        <TextView
+            android:src="@drawable/sikerja"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_marginTop="10dp"
+            android:background="@null"
+            android:text="Silhkan Masukkan Data Anda"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:hint="Nik"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:hint="Nama"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/Seepassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#000000"
-            android:text="KABUPATEN KAYONG UTARA"
-            android:textStyle="bold"
-            android:textSize="16dp"/>
-
+            android:textSize="14dp"
+            android:text="Show password"
+            android:layout_alignLeft="@+id/password"
+            android:layout_below="@+id/password"
+            android:layout_marginBottom="5dp"
+            />
+        </RelativeLayout>
 
 
         <Button
@@ -46,7 +121,7 @@
             android:textColor="#000000"/>
 
         <Button
-            android:id="@+id/btnLinkToRegisterScreen"
+            android:id="@+id/btnLinkToLoginScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

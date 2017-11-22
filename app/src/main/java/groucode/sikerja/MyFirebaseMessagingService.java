@@ -1,4 +1,4 @@
-package groucode.sikerja.helper;
+package groucode.sikerja;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

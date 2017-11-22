@@ -28,9 +28,13 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
+import java.util.HashMap;
+
 import groucode.sikerja.R;
 import groucode.sikerja.fragment.*;
 
+import groucode.sikerja.helper.SQLiteHandler;
+import groucode.sikerja.helper.SessionManager;
 import groucode.sikerja.other.CircleTransform;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawer;
     private View navHeader;
+    SessionManager session;
+    SQLiteHandler db;
     private ImageView imgNavHeaderBg, imgProfile;
     private TextView txtName, txtWebsite;
     private Toolbar toolbar;
@@ -86,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        db = new SQLiteHandler(getApplicationContext());
+        session = new SessionManager(getApplicationContext());
+
+        HashMap<String, String> user = db.getUserDetails();
+        String nama = user.get("nama");
+        Toast.makeText(this, nama, Toast.LENGTH_LONG).show();
 
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
@@ -339,8 +352,11 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog,
                                             int which) {
 
+                            session.setLogin(false);
+                            db.deleteUsers();
+                            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                            startActivity(intent);
                             finish();
-                            System.exit(0);
                         }
                     });
             ad.setNegativeButton("TIDAK",
