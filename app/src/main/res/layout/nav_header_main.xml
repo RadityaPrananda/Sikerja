@@ -26,7 +26,7 @@
             android:id="@+id/img_profile"
             android:layout_width="@dimen/profile_width"
             android:layout_height="@dimen/profile_height"
-            android:paddingTop="0dp"
+            android:paddingTop="5dp"
             app:srcCompat="@android:drawable/sym_def_app_icon" />
 
         <TextView

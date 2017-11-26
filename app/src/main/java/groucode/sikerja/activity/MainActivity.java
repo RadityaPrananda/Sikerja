@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     // urls to load navigation header background image
     // and profile image
     private static final String urlNavHeaderBg = "https://trywahyudinata.web.id/raditya/file/navheader.png";
-    private static final String urlProfileImg = "https://trywahyudinata.web.id/raditya/file/logo.png";
+    private static final String urlProfileImg = "https://trywahyudinata.web.id/raditya/file/kayong.png";
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         HashMap<String, String> user = db.getUserDetails();
         String nama = user.get("nama");
-        Toast.makeText(this, nama, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Selamat datang, " +nama, Toast.LENGTH_LONG).show();
 
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
@@ -144,11 +144,10 @@ public class MainActivity extends AppCompatActivity {
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgNavHeaderBg);
 //
-//        // Loading profile image
+        // Loading profile image
         Glide.with(this).load(urlProfileImg)
                 .crossFade()
-                .thumbnail(0.5f)
-                .bitmapTransform(new CircleTransform(this))
+                .thumbnail(0.1f)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgProfile);
 

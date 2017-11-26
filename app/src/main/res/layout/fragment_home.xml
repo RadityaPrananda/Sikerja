@@ -7,10 +7,11 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/logo"/>
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:src="@drawable/kayong"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

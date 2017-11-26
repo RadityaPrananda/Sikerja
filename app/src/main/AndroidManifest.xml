@@ -7,9 +7,9 @@
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/kayong"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/kayong"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.SplashActivity"

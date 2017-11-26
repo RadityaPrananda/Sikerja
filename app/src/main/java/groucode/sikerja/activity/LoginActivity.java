@@ -87,6 +87,7 @@ public class LoginActivity extends Activity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String nik = inputUsername.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
