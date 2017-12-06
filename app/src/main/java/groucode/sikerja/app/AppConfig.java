@@ -12,4 +12,6 @@ public class AppConfig {
     // Server user register url
     public static String URL_REGISTER = "https://trywahyudinata.web.id/raditya/SikerjaAPI/register.php";
 
+    public static String URL_UPDATE_TOKEN = "https://trywahyudinata.web.id/raditya/SikerjaAPI/updateToken.php";
+
 }

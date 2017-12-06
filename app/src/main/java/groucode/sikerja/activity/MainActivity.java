@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -31,8 +32,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import java.util.HashMap;
 
 import groucode.sikerja.R;
+import groucode.sikerja.app.AppConfig;
 import groucode.sikerja.fragment.*;
 
+import groucode.sikerja.helper.RequestHandler;
 import groucode.sikerja.helper.SQLiteHandler;
 import groucode.sikerja.helper.SessionManager;
 import groucode.sikerja.other.CircleTransform;
@@ -114,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(getString(R.string.FCM_PREF), Context.MODE_PRIVATE);
         final String token = sharedPreferences.getString(getString(R.string.FCM_TOKEN), "");
 
-//        updateToken(token);
+        updateToken(token);
 
         // load nav menu header data
         loadNavHeader();
@@ -406,5 +409,37 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void updateToken(final String token){
+        HashMap<String, String> user = db.getUserDetails();
+        final String nik = user.get("nik");
+
+        class updateToken extends AsyncTask<Void,Void,String> {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+            }
+
+            @Override
+            protected String doInBackground(Void... params) {
+                HashMap<String,String> hashMap = new HashMap<>();
+                hashMap.put("nik",nik);
+                hashMap.put("token",token);
+
+                RequestHandler rh = new RequestHandler();
+
+                String s = rh.sendPostRequest(AppConfig.URL_UPDATE_TOKEN,hashMap);
+
+                return s;
+            }
+        }
+        updateToken uT = new updateToken();
+        uT.execute();
     }
 }

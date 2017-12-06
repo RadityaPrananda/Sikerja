@@ -33,15 +33,15 @@
                 android:id="@+id/nav_keluar"
                 android:icon="@drawable/ic_power_settings_new_black_24dp"
                 android:title="@string/nav_logout" />
+        </menu>
+    </item>
 
+    <item android:title="Sikerja v1.0.1">
+        <menu>
             <item
                 android:id="@+id/nav_space"
                 android:title="" />
-
-            <item
-                android:id="@+id/nav_apliaksi"
-                android:title="sikerja V1.1" />
-        </menu>
+            </menu>
     </item>
 
 
