@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     // tags used to attach the fragments
     private static final String TAG_HOME = "beranda";
     private static final String TAG_LOWONGAN = "lowongan kerja";
+    private static final String TAG_PELATIHAN = "informasi pelatihan";
     private static final String TAG_KUNING= "kartu kuning";
 
     private static final String TAG_MATERI = "materi";
@@ -216,6 +217,10 @@ public class MainActivity extends AppCompatActivity {
                 return lowonganFragment;
             case 2:
                 // photos
+                PelatihanFragment pelatihanFragment = new PelatihanFragment();
+                return pelatihanFragment;
+            case 3:
+                // photos
                 KuningFragment kuningFragment = new KuningFragment();
                 return kuningFragment;
             default:
@@ -250,13 +255,44 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 1;
                         CURRENT_TAG = TAG_LOWONGAN;
                         break;
-                    case R.id.nav_kuning:
+                    case R.id.nav_pelatihan:
                         navItemIndex = 2;
+                        CURRENT_TAG = TAG_PELATIHAN;
+                        break;
+                    case R.id.nav_kuning:
+                        navItemIndex = 3;
                         CURRENT_TAG = TAG_KUNING;
                         break;
                     case R.id.nav_petunjukaplikasi:
                         // launch new intent instead of loading fragment
                         startActivity(new Intent(MainActivity.this, PenjelasanActivity.class));
+                        drawer.closeDrawers();
+                        return true;
+                    case R.id.nav_keluar:
+                        // launch new intent instead of loading fragment
+                        AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                        ad.setTitle("Keluar Aplikasi?");
+                        ad.setMessage("tekan YA untuk Keluar!");
+                        ad.setPositiveButton("YA",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+
+                                        session.setLogin(false);
+                                        db.deleteUsers();
+                                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                });
+                        ad.setNegativeButton("TIDAK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        ad.show();
                         drawer.closeDrawers();
                         return true;
                     default:

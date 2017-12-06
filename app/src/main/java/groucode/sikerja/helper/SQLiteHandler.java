@@ -22,6 +22,7 @@ public class SQLiteHandler extends SQLiteOpenHelper{
     private static final String KEY_ID = "id";
     private static final String KEY_NIK = "nik";
     private static final String KEY_NAMA = "nama";
+    private static final String KEY_KECAMATAN = "kecamatan";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_TOKEN = "token";
 
@@ -32,7 +33,7 @@ public class SQLiteHandler extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db){
-        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NIK + " TEXT UNIQUE," + KEY_NAMA + " TEXT," + KEY_EMAIL + " TEXT," + KEY_TOKEN + " TEXT" + ")";
+        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NIK + " TEXT UNIQUE," + KEY_NAMA + " TEXT," + KEY_KECAMATAN + " TEXT," + KEY_EMAIL + " TEXT," + KEY_TOKEN + " TEXT" + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
 
         Log.d(TAG, "Database tables created");
@@ -46,12 +47,13 @@ public class SQLiteHandler extends SQLiteOpenHelper{
     }
 
 
-    public void addUser(String nik, String nama, String email, String token){
+    public void addUser(String nik, String nama, String kecamatan, String email, String token){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_NIK, nik);
         values.put(KEY_NAMA, nama);
+        values.put(KEY_KECAMATAN, kecamatan);
         values.put(KEY_EMAIL, email);
         values.put(KEY_TOKEN, token);
         long uid = db.insert(TABLE_USER, null, values);
@@ -72,8 +74,9 @@ public class SQLiteHandler extends SQLiteOpenHelper{
         if (cursor.getCount() > 0){
             user.put("nik", cursor.getString(1));
             user.put("nama", cursor.getString(2));
-            user.put("email", cursor.getString(3));
-            user.put("token", cursor.getString(4));
+            user.put("kecamatan", cursor.getString(3));
+            user.put("email", cursor.getString(4));
+            user.put("token", cursor.getString(5));
         }
         cursor.close();
         db.close();

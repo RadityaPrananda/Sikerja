@@ -40,6 +40,7 @@ public class RegisterActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnRegister;
     private Button btnLinkLogin;
+    private Spinner inputKecamatan;
     private EditText inputNik;
     private EditText inputNama;
     private EditText inputEmail;
@@ -55,6 +56,7 @@ public class RegisterActivity extends Activity {
 
         inputNik = (EditText) findViewById(R.id.nik);
         inputNama = (EditText) findViewById(R.id.nama);
+        inputKecamatan = (Spinner) findViewById(R.id.kecamatan);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         btnLinkLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
@@ -95,11 +97,12 @@ public class RegisterActivity extends Activity {
             public void onClick(View v) {
                 String nik = inputNik.getText().toString();
                 String nama = inputNama.getText().toString();
+                String kecamatan = inputKecamatan.getSelectedItem().toString();
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
 
-                if (!nik.isEmpty() && !nama.isEmpty() && !email.isEmpty() &&  !password.isEmpty()) {
-                    registerUser(nik, nama, email, password);
+                if (!nik.isEmpty() && !nama.isEmpty() && !kecamatan.equals("Pilih Kecamatan") && !email.isEmpty() &&  !password.isEmpty()) {
+                    registerUser(nik, nama, kecamatan, email, password);
                     } else {
                     Toast.makeText(getApplicationContext(), "Silahkan masukkan data diri anda!", Toast.LENGTH_LONG).show();
                     }
@@ -122,7 +125,7 @@ public class RegisterActivity extends Activity {
 
     }
 
-    private void registerUser(final String nik, final String nama, final String email, final String password){
+    private void registerUser(final String nik, final String nama, final String kecamatan, final String email, final String password){
         String tag_string_req = "req_register";
         pDialog.setMessage("Mendaftarkan ...");
         showDialog();
@@ -175,6 +178,7 @@ public class RegisterActivity extends Activity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("nik", nik);
                 params.put("nama", nama);
+                params.put("kecamatan", kecamatan);
                 params.put("email", email);
                 params.put("password", password);
 

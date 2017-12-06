@@ -64,6 +64,19 @@
             android:textColorHint="#000000"
             android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:entries="@array/kecamatan"
+            android:prompt="@string/kecamatan_prompt"
+            android:textColor="#000000"
+            >
+        </Spinner>
+
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
@@ -71,7 +84,7 @@
             android:layout_marginBottom="10dp"
             android:background="#ffffff"
             android:hint="Email"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
             android:paddingTop="5dp"
             android:singleLine="true"
@@ -115,7 +128,7 @@
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="#ffffff"
             android:text="Daftar"
             android:textColor="#000000"/>
@@ -124,7 +137,7 @@
             android:id="@+id/btnLinkToLoginScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:background="@null"
             android:text="Sudah Terdaftar? Silahkan Login!"
             android:textAllCaps="false"

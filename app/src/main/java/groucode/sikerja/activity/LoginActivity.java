@@ -151,10 +151,11 @@ public class LoginActivity extends Activity {
                         String nik = jObj.getString("nik");
                         JSONObject user = jObj.getJSONObject("user");
                         String nama = user.getString("nama");
+                        String kecamatan = user.getString("kecamatan");
                         String email = user.getString("email");
                         String token = user.getString("token");
 
-                        db.addUser(nik, nama, email, token);
+                        db.addUser(nik, nama, kecamatan, email, token);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
