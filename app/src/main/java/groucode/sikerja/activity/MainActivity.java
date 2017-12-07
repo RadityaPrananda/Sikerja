@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     // urls to load navigation header background image
     // and profile image
-    private static final String urlNavHeaderBg = "https://trywahyudinata.web.id/raditya/file/navheader.png";
-    private static final String urlProfileImg = "https://trywahyudinata.web.id/raditya/file/kayong.png";
+    private static final String urlNavHeaderBg = "http://trywahyudinata.web.id/raditya/file/navheader.png";
+    private static final String urlProfileImg = "http://trywahyudinata.web.id/raditya/file/kayong.png";
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         txtName = (TextView) navHeader.findViewById(R.id.name);
         txtWebsite = (TextView) navHeader.findViewById(R.id.website);
         imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
-        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
+//        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
 
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
@@ -139,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void loadNavHeader() {
         // name, website
-        txtName.setText("Sikerja");
-        txtWebsite.setText("Sistem Informasi Lowongan Kerja");
+//        txtName.setText("Sikerja");
+//        txtWebsite.setText("Sistem Informasi Lowongan Kerja");
 
         // loading header background image
         Glide.with(this).load(urlNavHeaderBg)
@@ -149,11 +149,11 @@ public class MainActivity extends AppCompatActivity {
                 .into(imgNavHeaderBg);
 //
         // Loading profile image
-        Glide.with(this).load(urlProfileImg)
-                .crossFade()
-                .thumbnail(0.1f)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(imgProfile);
+//        Glide.with(this).load(urlProfileImg)
+//                .crossFade()
+//                .thumbnail(0.1f)
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(imgProfile);
 
         // showing dot next to notifications label
         navigationView.getMenu().getItem(3).setActionView(R.layout.menu_dot);
