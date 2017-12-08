@@ -12,6 +12,8 @@ public class AppConfig {
     // Server user register url
     public static String URL_REGISTER = "https://eloker-kayongutara.com/raditya/SikerjaAPI/register.php";
 
+    public static String URL_REGISTER_KARTU = "https://eloker-kayongutara.com/raditya/SikerjaAPI/registerKartu.php";
+
     public static String URL_UPDATE_TOKEN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/updateToken.php";
 
     public static String URL_GET_LOWONGAN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/getLowongan.php";

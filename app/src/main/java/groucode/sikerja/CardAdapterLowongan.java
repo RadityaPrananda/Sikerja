@@ -53,6 +53,7 @@ public class CardAdapterLowongan extends RecyclerView.Adapter<CardAdapterLowonga
         holder.textViewBatasWaktu.setText(list.getBataswaktu());
         Glide.with(context).load(list.getLogoperusahaan())
                 .crossFade()
+                .thumbnail(0.1f)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.imageViewLogoperusahaan);
         holder.textViewNamaPerusahaan.setText(list.getNamaperusahaan());

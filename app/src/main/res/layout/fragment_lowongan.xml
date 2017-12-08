@@ -35,7 +35,7 @@
             android:id="@+id/pekerjaanterbaru"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PEKERJAAN TERBARU"
+            android:text="LOWONGAN KERJA TERBARU"
             android:textSize="14dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"

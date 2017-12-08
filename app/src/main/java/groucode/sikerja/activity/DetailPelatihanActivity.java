@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -27,14 +30,31 @@ public class DetailPelatihanActivity extends AppCompatActivity implements SwipeR
     private String JSON_STRING;
     private SwipeRefreshLayout swipeRefreshLayout;
 
+    private TextView txtnamapelatihan, txtpenyelenggara, txtbidang, txtwaktu, txttempat, txtkuota, txtcaramendaftar, txtbiaya, txtfasilitas;
+    private ImageView imgLogoPelatihan;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailpelatihan);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        txtnamapelatihan = (TextView) findViewById(R.id.nama_pelatihan);
+        txtpenyelenggara = (TextView) findViewById(R.id.penyelenggara);
+        txtbidang = (TextView) findViewById(R.id.bidang);
+        txtwaktu = (TextView) findViewById(R.id.waktu);
+        txttempat= (TextView) findViewById(R.id.tempat);
+        txtkuota = (TextView) findViewById(R.id.kuota);
+        txtcaramendaftar = (TextView) findViewById(R.id.daftar);
+        txtbiaya = (TextView) findViewById(R.id.biaya);
+        txtfasilitas = (TextView) findViewById(R.id.fasilitas);
+
+        imgLogoPelatihan = (ImageView) findViewById(R.id.logopelatihan);
+
+
 
         Intent intent = getIntent();
         final String id = intent.getStringExtra(AppConfig.TAG_ID);
+
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
@@ -116,37 +136,33 @@ public class DetailPelatihanActivity extends AppCompatActivity implements SwipeR
             JSONArray result = jsonObject.getJSONArray("result");
             JSONObject jo = result.getJSONObject(0);
             String id = jo.getString(AppConfig.TAG_ID);
-            String bataswaktu = jo.getString(AppConfig.TAG_BATASWAKTU);
-            String logoperusahaan = jo.getString(AppConfig.TAG_LOGOPERUSAHAAN);
-            String namaperusahaan = jo.getString(AppConfig.TAG_NAMAPERUSAHAAN);
-            String jabatan = jo.getString(AppConfig.TAG_JABATAN);
-            String lokasi = jo.getString(AppConfig.TAG_LOKASI);
-            String deskripsi = jo.getString(AppConfig.TAG_DESKRIPSI);
-            String persyaratan = jo.getString(AppConfig.TAG_PERSYARATAN);
-            String caradaftar = jo.getString(AppConfig.TAG_CARADAFTAR);
-            String alamatkantor = jo.getString(AppConfig.TAG_ALAMATKANTOR);
-            String website = jo.getString(AppConfig.TAG_WEBSITE);
-            String jumlahkaryawan = jo.getString(AppConfig.TAG_JUMLAHKARYAWAN);
-            String deskripsiperusahaan = jo.getString(AppConfig.TAG_DESKRIPSIPERUSAHAAN);
+            String namapelatihan = jo.getString(AppConfig.TAG_NAMAPELATIHAN);
+            String logopelatihan = jo.getString(AppConfig.TAG_LOGOPELATIHAN);
+            String bidang = jo.getString(AppConfig.TAG_BIDANG);
+            String penyelenggara = jo.getString(AppConfig.TAG_PENYELENGGARA);
+            String waktu = jo.getString(AppConfig.TAG_WAKTU);
+            String tempat = jo.getString(AppConfig.TAG_TEMPAT);
+            String kuota = jo.getString(AppConfig.TAG_KUOTA);
+            String caramendaftar = jo.getString(AppConfig.TAG_CARAMENDAFTAR);
+            String biaya = jo.getString(AppConfig.TAG_BIAYA);
+            String fasilitas = jo.getString(AppConfig.TAG_FASILITAS);
 
-//            Toast.makeText(this, newnoreg_berkas, Toast.LENGTH_LONG).show();
 
-//            txtbataswaktu.setText(bataswaktu);
-//            txtnamaperusahaan.setText(namaperusahaan);
-//            txtjabatan.setText(jabatan);
-//            txtlokasi.setText(lokasi);
-//            txtdeskripsi.setText(deskripsi);
-//            txtpersyaratan.setText(persyaratan);
-//            txtcaradaftar.setText(caradaftar);
-//            txtalamatkantor.setText(alamatkantor);
-//            txtwebsite.setText(website);
-//            txtjumlahkaryawan.setText(jumlahkaryawan);
-//            txtdeskripsiperusahaan.setText(deskripsiperusahaan);
-//
-//            Glide.with(this).load(logoperusahaan)
-//                    .crossFade()
-//                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                    .into(imgLogoPerusahaan);
+
+            txtnamapelatihan.setText(namapelatihan);
+            txtpenyelenggara.setText(penyelenggara);
+            txtbidang.setText(bidang);
+            txtwaktu.setText(waktu);
+            txttempat.setText(tempat);
+            txtkuota.setText(kuota);
+            txtcaramendaftar.setText(caramendaftar);
+            txtbiaya.setText(biaya);
+            txtfasilitas.setText(fasilitas);
+
+            Glide.with(this).load(logopelatihan)
+                    .crossFade()
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(imgLogoPelatihan);
 
 
         } catch (JSONException e) {
