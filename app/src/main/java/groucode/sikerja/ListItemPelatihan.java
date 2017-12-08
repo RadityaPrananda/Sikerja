@@ -7,6 +7,7 @@ package groucode.sikerja;
 public class ListItemPelatihan {
     private String id;
     private String namapelatihan;
+    private String logopelatihan;
     private String bidang;
     private String penyelenggara;
     private String waktu;
@@ -38,6 +39,14 @@ public class ListItemPelatihan {
 
     public String getBidang() {
         return bidang;
+    }
+
+    public void setLogopelatihan(String logopelatihan) {
+        this.logopelatihan = logopelatihan;
+    }
+
+    public String getLogopelatihan() {
+        return logopelatihan;
     }
 
     public void setPenyelenggara(String penyelenggara) {

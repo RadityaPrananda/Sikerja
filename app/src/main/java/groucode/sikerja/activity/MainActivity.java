@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     // urls to load navigation header background image
     // and profile image
-    private static final String urlNavHeaderBg = "http://trywahyudinata.web.id/raditya/file/navheader.png";
-    private static final String urlProfileImg = "http://trywahyudinata.web.id/raditya/file/kayong.png";
+    private static final String urlNavHeaderBg = "https://eloker-kayongutara.com/raditya/file/navheader.png";
+    private static final String urlProfileImg = "https://eloker-kayongutara.com/raditya/file/kayong.png";
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;

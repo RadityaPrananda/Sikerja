@@ -41,6 +41,11 @@
             android:theme="@style/AppTheme.ActionBar"
             android:label="Detail Lowongan">
         </activity>
+        <activity
+            android:name=".activity.DetailPelatihanActivity"
+            android:theme="@style/AppTheme.ActionBar"
+            android:label="Detail Pelatihan">
+        </activity>
 
 
         <service

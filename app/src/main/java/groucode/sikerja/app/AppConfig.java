@@ -7,20 +7,20 @@ package groucode.sikerja.app;
 public class AppConfig {
 
     // Server user login url
-    public static String URL_LOGIN = "https://trywahyudinata.web.id/raditya/SikerjaAPI/login.php";
+    public static String URL_LOGIN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/login.php";
 
     // Server user register url
-    public static String URL_REGISTER = "https://trywahyudinata.web.id/raditya/SikerjaAPI/register.php";
+    public static String URL_REGISTER = "https://eloker-kayongutara.com/raditya/SikerjaAPI/register.php";
 
-    public static String URL_UPDATE_TOKEN = "https://trywahyudinata.web.id/raditya/SikerjaAPI/updateToken.php";
+    public static String URL_UPDATE_TOKEN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/updateToken.php";
 
-    public static String URL_GET_LOWONGAN = "https://trywahyudinata.web.id/raditya/SikerjaAPI/getLowongan.php";
+    public static String URL_GET_LOWONGAN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/getLowongan.php";
 
-    public static String URL_GETDetailLowongan = "https://trywahyudinata.web.id/raditya/SikerjaAPI/getDetailLowongan.php?id=";
+    public static String URL_GETDetailLowongan = "https://eloker-kayongutara.com/raditya/SikerjaAPI/getDetailLowongan.php?id=";
 
-    public static String URL_GET_PELATIHAN = "https://trywahyudinata.web.id/raditya/SikerjaAPI/getPelatihan.php";
+    public static String URL_GET_PELATIHAN = "https://eloker-kayongutara.com/raditya/SikerjaAPI/getPelatihan.php";
 
-    public static String URL_GETDetailPelatihan = "https://trywahyudinata.web.id/raditya/SikerjaAPI/getDetailPelatihan.php?id=";
+    public static String URL_GETDetailPelatihan = "https://eloker-kayongutara.com/raditya/SikerjaAPI/getDetailPelatihan.php?id=";
 
 
 //get lowongan kerja
@@ -41,6 +41,7 @@ public class AppConfig {
 
     //get pelatihan
     public static String[] namapelatihan;
+    public static String[] logopelatihan;
     public static String[] bidang;
     public static String[] penyelenggara;
     public static String[] waktu;
@@ -71,6 +72,7 @@ public class AppConfig {
         //getPelatihan
 
         namapelatihan = new String[i];
+        logopelatihan = new String[i];
         bidang = new String[i];
         penyelenggara = new String[i];
         waktu = new String[i];
@@ -98,6 +100,7 @@ public class AppConfig {
     public static final String TAG_DESKRIPSIPERUSAHAAN = "deskripsiperusahaan";
 
     public static final String TAG_NAMAPELATIHAN = "namapelatihan";
+    public static final String TAG_LOGOPELATIHAN = "logopelatihan";
     public static final String TAG_BIDANG = "bidang";
     public static final String TAG_PENYELENGGARA = "penyelenggara";
     public static final String TAG_WAKTU= "waktu";

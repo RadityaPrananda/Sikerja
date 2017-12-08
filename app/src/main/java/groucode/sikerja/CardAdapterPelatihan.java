@@ -21,7 +21,7 @@ public class CardAdapterPelatihan extends RecyclerView.Adapter<CardAdapterPelati
     List<ListItemPelatihan> items;
     Context context;
 
-    public CardAdapterPelatihan(Context context, String[] id, String[] namapelatihan, String[] penyelenggara, String[] waktu, String[] tempat, String[] kuota){
+    public CardAdapterPelatihan(Context context, String[] id, String[] namapelatihan, String[] logopelatihan, String[] penyelenggara, String[] waktu, String[] tempat, String[] kuota){
         super();
         this.context = context;
         items = new ArrayList<ListItemPelatihan>();
@@ -29,6 +29,7 @@ public class CardAdapterPelatihan extends RecyclerView.Adapter<CardAdapterPelati
             ListItemPelatihan item = new ListItemPelatihan();
             item.setId(id[i]);
             item.setNamapelatihan(namapelatihan[i]);
+            item.setLogopelatihan(logopelatihan[i]);
             item.setPenyelenggara(penyelenggara[i]);
             item.setWaktu(waktu[i]);
             item.setTempat(tempat[i]);
@@ -49,6 +50,10 @@ public class CardAdapterPelatihan extends RecyclerView.Adapter<CardAdapterPelati
 
         final ListItemPelatihan list = items.get(position);
         holder.textViewNamaPelatihan.setText(list.getNamapelatihan());
+        Glide.with(context).load(list.getLogopelatihan())
+                .crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.ImgViewLogoPelatihan);
         holder.textViewPenyelenggara.setText(list.getPenyelenggara());
         holder.textViewWaktu.setText(list.getWaktu());
         holder.textViewTempat.setText(list.getTempat());
@@ -72,6 +77,7 @@ public class CardAdapterPelatihan extends RecyclerView.Adapter<CardAdapterPelati
 
     class ViewHolder extends RecyclerView.ViewHolder{
         public TextView textViewNamaPelatihan;
+        public ImageView ImgViewLogoPelatihan;
         public TextView textViewPenyelenggara;
         public TextView textViewWaktu;
         public TextView textViewTempat;
@@ -81,6 +87,7 @@ public class CardAdapterPelatihan extends RecyclerView.Adapter<CardAdapterPelati
         public ViewHolder(View itemView){
             super(itemView);
             textViewNamaPelatihan = (TextView) itemView.findViewById(R.id.nama_pelatihan);
+            ImgViewLogoPelatihan = (ImageView) itemView.findViewById(R.id.logopelatihan);
             textViewPenyelenggara = (TextView) itemView.findViewById(R.id.penyelenggara);
             textViewWaktu = (TextView) itemView.findViewById(R.id.waktu);
             textViewTempat = (TextView) itemView.findViewById(R.id.tempat);

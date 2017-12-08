@@ -1,6 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="120dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logopelatihan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/lecture"
+
+            />
+
+        <TextView
+            android:id="@+id/nama_pelatihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/logopelatihan"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/penyelenggara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/nama_pelatihan"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textStyle="normal"/>
+
+
+    </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#f7f7f7"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <!--android:descendantFocusability="beforeDescendants"-->
+            <!--android:focusableInTouchMode="true"-->
+
+
+            <TextView
+                android:id="@+id/informasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INFORMASI PELATIHAN"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="10dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardringkasan"
+                android:layout_below="@+id/informasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iconbidang"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_school_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tagbidang"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bidang Pelatihan"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iconbidang"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/bidang"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:layout_below="@+id/tagbidang"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/iconmap"
+                        android:textStyle="normal"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/viewbidang"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#b9b9b9"
+                        android:layout_below="@+id/bidang"
+                        android:layout_marginLeft="30dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iconmap"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/viewbidang"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_location_on_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/taglokasi"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tempat Pelatihan"
+                        android:layout_below="@id/viewbidang"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iconmap"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tempat"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:layout_below="@+id/taglokasi"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/iconmap"
+                        android:textStyle="normal"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/viewlokasi"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#b9b9b9"
+                        android:layout_below="@+id/tempat"
+                        android:layout_marginLeft="30dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iconwaktu"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitCenter"
+                        android:layout_below="@+id/viewlokasi"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_date_range_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tagwaktu"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu Pelatiahan"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/viewlokasi"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/waktu"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:layout_below="@+id/tagwaktu"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="normal"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/viewwaktu"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#b9b9b9"
+                        android:layout_below="@+id/waktu"
+                        android:layout_marginLeft="30dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/iconkuota"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitCenter"
+                        android:layout_below="@+id/viewwaktu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_people_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tagkuota"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kuota Peserta Pelatihan"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/viewwaktu"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/kuota"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:layout_below="@+id/tagkuota"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="normal"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/viewkuota"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/kuota"
+                        android:background="#b9b9b9"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/icondaftar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitCenter"
+                        android:layout_below="@+id/viewkuota"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_send_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tagdaftar"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cara Mendaftar / Mengikuti Pelatihan"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/viewkuota"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/daftar"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:layout_below="@+id/tagdaftar"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/iconwaktu"
+                        android:textStyle="normal"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/viewdaftar"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/daftar"
+                        android:background="#b9b9b9"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+</RelativeLayout>

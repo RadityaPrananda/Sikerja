@@ -159,6 +159,7 @@ public class PelatihanFragment extends Fragment implements SwipeRefreshLayout.On
                 JSONObject j = array.getJSONObject(i);
                 AppConfig.id[i] = getId(j);
                 AppConfig.namapelatihan[i] = getNamapelatihan(j);
+                AppConfig.logopelatihan[i] = getLogopelatihan(j);
                 AppConfig.penyelenggara[i] = getPenyelenggara(j);
                 AppConfig.waktu[i] = getWaktu(j);
                 AppConfig.tempat[i] = getTempat(j);
@@ -167,7 +168,7 @@ public class PelatihanFragment extends Fragment implements SwipeRefreshLayout.On
 
             Log.d("Two Fragment", String.valueOf(array.length()));
 
-            adapter = new CardAdapterPelatihan(getContext().getApplicationContext(), AppConfig.id, AppConfig.namapelatihan, AppConfig.penyelenggara, AppConfig.waktu, AppConfig.tempat, AppConfig.kuota);
+            adapter = new CardAdapterPelatihan(getContext().getApplicationContext(), AppConfig.id, AppConfig.namapelatihan, AppConfig.logopelatihan, AppConfig.penyelenggara, AppConfig.waktu, AppConfig.tempat, AppConfig.kuota);
             recyclerView.setAdapter(adapter);
 
 
@@ -196,6 +197,16 @@ public class PelatihanFragment extends Fragment implements SwipeRefreshLayout.On
             e.printStackTrace();
         }
         return namapelatihan;
+    }
+
+    private String getLogopelatihan(JSONObject j){
+        String logopelatihan = null;
+        try {
+            logopelatihan = j.getString(AppConfig.TAG_LOGOPELATIHAN);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logopelatihan;
     }
 
     private String getPenyelenggara(JSONObject j){
