@@ -36,6 +36,11 @@
             android:name=".activity.PenjelasanActivity"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name=".activity.DetailLowonganActivity"
+            android:theme="@style/AppTheme.ActionBar"
+            android:label="Detail Lowongan">
+        </activity>
 
 
         <service

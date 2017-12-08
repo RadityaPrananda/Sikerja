@@ -104,7 +104,7 @@ public class LowonganFragment extends Fragment implements SwipeRefreshLayout.OnR
                                     public void run() {
                                         swipeRefreshLayout.setRefreshing(true);
 
-//                                        get();
+                                        get();
                                         swipeRefreshLayout.setRefreshing(false);
                                     }
                                 }
@@ -220,7 +220,9 @@ public class LowonganFragment extends Fragment implements SwipeRefreshLayout.OnR
 
             for (int i=0; i<array.length(); i++){
                 JSONObject j = array.getJSONObject(i);
+                AppConfig.id[i] = getId(j);
                 AppConfig.bataswaktu[i] = getBataswaktu(j);
+                AppConfig.logoperusahaan[i] = getLogoperusahaan(j);
                 AppConfig.namaperusahaan[i] = getNamaperusahaan(j);
                 AppConfig.jabatan[i] = getJabatan(j);
                 AppConfig.lokasi[i] = getLokasi(j);
@@ -228,7 +230,7 @@ public class LowonganFragment extends Fragment implements SwipeRefreshLayout.OnR
 
             Log.d("Two Fragment", String.valueOf(array.length()));
 
-            adapter = new CardAdapterLowongan(getContext().getApplicationContext(), AppConfig.bataswaktu, AppConfig.namaperusahaan, AppConfig.jabatan, AppConfig.lokasi);
+            adapter = new CardAdapterLowongan(getContext().getApplicationContext(), AppConfig.id, AppConfig.bataswaktu, AppConfig.logoperusahaan, AppConfig.namaperusahaan, AppConfig.jabatan, AppConfig.lokasi);
             recyclerView.setAdapter(adapter);
 
 
@@ -237,6 +239,16 @@ public class LowonganFragment extends Fragment implements SwipeRefreshLayout.OnR
             e.printStackTrace();
         }
 
+    }
+
+    private String getId(JSONObject j){
+        String id = null;
+        try {
+            id = j.getString(AppConfig.TAG_ID);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return id;
     }
 
     private String getBataswaktu(JSONObject j){
@@ -248,6 +260,17 @@ public class LowonganFragment extends Fragment implements SwipeRefreshLayout.OnR
         }
         return bataswaktu;
     }
+
+    private String getLogoperusahaan(JSONObject j){
+        String logoperusahaan = null;
+        try {
+            logoperusahaan = j.getString(AppConfig.TAG_LOGOPERUSAHAAN);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logoperusahaan;
+    }
+
     private String getNamaperusahaan(JSONObject j){
         String namaperusahaan = null;
         try{

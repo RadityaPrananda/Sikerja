@@ -5,7 +5,9 @@ package groucode.sikerja;
  */
 
 public class ListItemLowongan {
+    private String id;
     private String bataswaktu;
+    private String logoperusahaan;
     private String namaperusahaan;
     private String jabatan;
     private String lokasi;
@@ -17,12 +19,28 @@ public class ListItemLowongan {
     private String jumlahkaryawan;
     private String deskripsiperusahaan;
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
     public void setBataswaktu(String bataswaktu) {
         this.bataswaktu = bataswaktu;
     }
 
     public String getBataswaktu() {
         return bataswaktu;
+    }
+
+    public void setLogoperusahaan(String logoperusahaan) {
+        this.logoperusahaan = logoperusahaan;
+    }
+
+    public String getLogoperusahaan() {
+        return logoperusahaan;
     }
 
     public void setNamaperusahaan(String namaperusahaan) {

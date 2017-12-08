@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="120dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logoperusahaan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/kayong"
+
+            />
+
+        <TextView
+            android:id="@+id/jabatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/logoperusahaan"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/nama_perusahaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/jabatan"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textStyle="normal"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#f7f7f7"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <!--android:descendantFocusability="beforeDescendants"-->
+        <!--android:focusableInTouchMode="true"-->
+
+
+        <TextView
+            android:id="@+id/ringkasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RINGKASAN"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardringkasan"
+            android:layout_below="@+id/ringkasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iconmap"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_location_on_black_24dp"/>
+
+            <TextView
+                android:id="@+id/taglokasi"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Lokasi Pekerjaan"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconmap"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                />
+
+                <TextView
+                    android:id="@+id/lokasi"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:layout_below="@+id/taglokasi"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/iconmap"
+                    android:textStyle="normal"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/viewlokasi"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#b9b9b9"
+                    android:layout_below="@+id/lokasi"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iconwaktu"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:layout_below="@+id/viewlokasi"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_date_range_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tagbataswaktu"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Batas Waktu Pendaftaran"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/viewlokasi"
+                    android:layout_toRightOf="@+id/iconwaktu"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/batas_waktu"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:layout_below="@+id/tagbataswaktu"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/iconwaktu"
+                    android:textStyle="normal"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/viewbataslokasi"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#b9b9b9"
+                    android:layout_below="@+id/batas_waktu"
+                    android:layout_marginLeft="30dp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/icondeskripsi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:layout_below="@+id/viewbataslokasi"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_view_list_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tagdeskripsi"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi Pekerjaan"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/viewbataslokasi"
+                    android:layout_toRightOf="@+id/iconwaktu"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/deskripsi"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:layout_below="@+id/tagdeskripsi"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/iconwaktu"
+                    android:textStyle="normal"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/viewdeskripsi"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/deskripsi"
+                    android:background="#b9b9b9"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <TextView
+        android:id="@+id/judulpersyaratan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PERSYARATAN"
+        android:layout_below="@+id/cardringkasan"
+        android:textSize="14dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardpersyaratan"
+            android:layout_below="@+id/judulpersyaratan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                android:id="@+id/iconpersyaratan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_accessibility_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tagkualifikasi"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kualifikasi"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iconpersyaratan"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/persyaratan"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:layout_below="@+id/tagkualifikasi"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/iconpersyaratan"
+                    android:textStyle="normal"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/viewkualifikasi"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#b9b9b9"
+                    android:layout_below="@+id/persyaratan"
+                    android:layout_marginLeft="30dp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/icondaftar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/viewkualifikasi"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_send_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tagdaftar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tata Cara Pendaftaran"
+                    android:layout_below="@+id/viewkualifikasi"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iconpersyaratan"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/caradaftar"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:layout_below="@+id/tagdaftar"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/iconpersyaratan"
+                    android:textStyle="normal"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/viewdaftar"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#b9b9b9"
+                    android:layout_below="@+id/caradaftar"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/judulperusahaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERUSAHAAN"
+            android:layout_below="@+id/cardpersyaratan"
+            android:textSize="14dp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardperusahaan"
+            android:layout_below="@+id/judulperusahaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iconlokasi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_location_on_black_24dp"/>
+
+            <TextView
+                android:id="@+id/taglokasiperusahaan"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Lokasi Perusahaan"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconlokasi"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/lokasiperusahaan"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_below="@+id/taglokasiperusahaan"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/iconlokasi"
+                android:textStyle="normal"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:id="@+id/viewlokasiperusahaan"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#b9b9b9"
+                android:layout_below="@+id/lokasiperusahaan"
+                android:layout_marginLeft="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/iconwebsite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/viewlokasiperusahaan"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_language_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tagwebsite"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Website"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/viewlokasiperusahaan"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconwebsite"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/website"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_below="@+id/tagwebsite"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/iconlokasi"
+                android:textStyle="normal"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:id="@+id/viewwebsite"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/website"
+                android:background="#b9b9b9"
+                android:layout_marginLeft="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/iconpegawai"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/viewwebsite"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_people_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tagpegawai"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Karyawan"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/viewwebsite"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconwebsite"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/pegawai"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_below="@+id/tagpegawai"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/iconlokasi"
+                android:textStyle="normal"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:id="@+id/viewpegawai"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#b9b9b9"
+                android:layout_below="@+id/pegawai"
+                android:layout_marginLeft="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/icondeskripsiperusahaan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/viewpegawai"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_view_list_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tagdeskripsiperusahaan"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Perusahaan"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/viewpegawai"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconwebsite"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/deskripsiperusahaan"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_below="@+id/tagdeskripsiperusahaan"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/iconlokasi"
+                android:textStyle="normal"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:id="@+id/viewdeskripsipegawai"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#b9b9b9"
+                android:layout_below="@+id/deskripsiperusahaan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="5dp"
+                />
+            </RelativeLayout>
+
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
