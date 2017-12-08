@@ -96,19 +96,19 @@ public class PelatihanFragment extends Fragment implements SwipeRefreshLayout.On
                                     public void run() {
                                         swipeRefreshLayout.setRefreshing(true);
 
-//                                        get();
+                                        get();
                                         swipeRefreshLayout.setRefreshing(false);
                                     }
                                 }
         );
 
-//        get();
+        get();
 
         return view;
     }
 
     public void onRefresh() {
-//        get();
+        get();
     }
 
     private void get(){

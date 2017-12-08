@@ -63,12 +63,12 @@
                 android:scaleType="fitCenter"
                 android:layout_below="@+id/penyelenggara"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="45dp"
                 android:src="@drawable/ic_date_range_black_24dp"/>
 
             <TextView
                 android:id="@+id/waktu"
-                android:layout_width="110dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="2017-11-21 19.00"
                 android:textColor="@color/colorPrimary"
@@ -88,12 +88,12 @@
                 android:layout_below="@+id/penyelenggara"
                 android:layout_toRightOf="@+id/waktu"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/ic_location_on_black_24dp"/>
 
             <TextView
                 android:id="@+id/tempat"
-                android:layout_width="200dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="Gedung Serbaguna, Sukadana"
                 android:textColor="@color/colorPrimary"
@@ -114,8 +114,8 @@
                 android:layout_height="20dp"
                 android:scaleType="fitCenter"
                 android:layout_below="@+id/tagwaktu"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="110dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="115dp"
                 android:src="@drawable/ic_people_black_24dp"/>
 
             <TextView
@@ -123,13 +123,13 @@
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:text="9999"
-                android:textColor="#000000"
+                android:textColor="@color/colorPrimary"
                 android:layout_below="@+id/tagwaktu"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="12dp"
                 android:layout_toRightOf="@+id/tagkuota"
-                android:textStyle="normal"
+                android:textStyle="bold"
                 android:textSize="14dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="7dp"
                 />
 
             <TextView
@@ -137,11 +137,11 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="Orang"
-                android:textColor="#000000"
+                android:textColor="@color/colorPrimary"
                 android:layout_below="@+id/tagwaktu"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="12dp"
                 android:layout_toRightOf="@+id/kuota"
-                android:textStyle="normal"
+                android:textStyle="bold"
                 android:textSize="14dp"
                 />
 
