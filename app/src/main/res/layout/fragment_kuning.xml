@@ -3,12 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/swipe_refresh_layout"
-        android:layout_width="match_parent"
-        android:background="#eeeeee"
-        android:layout_height="120dp">
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
@@ -19,8 +13,6 @@
             android:src="@drawable/bannerkartu" />
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
-
 
 
     <ScrollView
@@ -30,7 +22,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="#efefef"
+        android:background="#ffffff"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
@@ -42,7 +34,7 @@
         android:id="@+id/formkartu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pengajuan Kartu Pencari Kerja"
+        android:text="Form Pengajuan Kartu Pencari Kerja"
         android:gravity="center"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -53,7 +45,7 @@
             android:id="@+id/taginformasiumum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Informasi Umum"
+            android:text="- Data Diri"
             android:layout_below="@id/formkartu"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -67,6 +59,7 @@
             android:layout_marginBottom="10dp"
             android:background="@color/colorPrimary"
             android:hint="NIK"
+            android:editable="false"
             android:layout_below="@id/taginformasiumum"
             android:inputType="text"
             android:padding="5dp"
@@ -81,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Nama"
             android:layout_below="@id/nik"
             android:inputType="text"
@@ -132,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Tempat Lahir"
             android:layout_below="@id/gelardepan"
             android:inputType="text"
@@ -188,19 +181,17 @@
                 android:padding="3dp"
                 >
                 <RadioButton
-                    android:id="@+id/laki"
+                    android:id="@+id/pria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Laki-Laki"
-                    android:onClick="onRadioButtonClicked"
+                    android:text="Pria"
                     android:padding="3dp"
                     />
                 <RadioButton
-                    android:id="@+id/perempuan"
+                    android:id="@+id/wanita"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perempuan"
-                    android:onClick="onRadioButtonClicked"
+                    android:text="Wanita"
                     android:padding="3dp"
                     />
             </RadioGroup>
@@ -212,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Agama"
             android:layout_below="@id/linearjk"
             android:inputType="text"
@@ -265,7 +256,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Nomor HP"
             android:layout_below="@id/tinggibadan"
             android:inputType="number"
@@ -297,7 +288,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Alamat"
             android:layout_below="@id/kecamatan"
             android:inputType="text"
@@ -314,7 +305,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="- Pendidikan dan Keahlian"
+            android:text="- Pendidikan dan Keterampilan"
             android:layout_below="@id/alamat"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -344,7 +335,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Pendidikan Terkahir"
             android:layout_below="@id/keterampilan"
             android:inputType="text"
@@ -377,8 +368,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
-            android:hint="Institusi"
+            android:background="#efefef"
+            android:hint="Nama Instansi Pendidikan"
             android:layout_below="@id/jurusan"
             android:inputType="text"
             android:padding="5dp"
@@ -397,7 +388,7 @@
             android:background="@color/colorPrimary"
             android:hint="Lama Studi"
             android:layout_below="@id/institusi"
-            android:inputType="number"
+            android:inputType="date"
             android:padding="5dp"
             android:paddingTop="5dp"
             android:singleLine="true"
@@ -429,7 +420,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#ffffff"
+            android:background="#efefef"
             android:hint="Nilai / IPK"
             android:layout_below="@id/lamastudi"
             android:inputType="date"
@@ -443,14 +434,22 @@
 
 
         <Button
+            android:id="@+id/simpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simpan Data"
             android:layout_below="@+id/nilai"
-            android:textStyle="bold"
             android:textColor="#ffffff"
             android:layout_marginTop="15dp"
             android:background="@color/colorPrimary"/>
+
+
+        <EditText
+            android:id="@+id/jk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:visibility="gone"/>
 
 
 
