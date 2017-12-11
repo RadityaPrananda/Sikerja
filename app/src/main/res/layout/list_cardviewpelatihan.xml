@@ -17,17 +17,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             >
 
 
 
             <ImageView
                 android:id="@+id/logopelatihan"
-                android:layout_width="60dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:foregroundGravity="center"
-                android:layout_marginLeft="130dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:src="@drawable/lecture"/>
 
 
@@ -93,7 +92,7 @@
 
             <TextView
                 android:id="@+id/tempat"
-                android:layout_width="110dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="Gedung Serbaguna, Sukadana"
                 android:textColor="@color/colorPrimary"
