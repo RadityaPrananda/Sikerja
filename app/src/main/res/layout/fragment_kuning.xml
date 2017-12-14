@@ -29,413 +29,425 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true"
         android:padding="15dp">
 
 
-
-
-    <TextView
+        <TextView
         android:id="@+id/formkartu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Form Pengajuan Kartu Pencari Kerja"
+        android:text="Form Kartu Pencari Kerja"
         android:gravity="center"
-        android:textSize="16dp"
+        android:textSize="13dp"
+            android:layout_marginBottom="10dp"
         android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginBottom="15dp"/>
+        android:textColor="#000000"/>
 
-        <TextView
-            android:id="@+id/taginformasiumum"
-            android:layout_width="match_parent"
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="- Data Diri"
-            android:layout_below="@id/formkartu"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="5dp"/>
+            android:layout_below="@+id/formkartu"
+            android:id="@+id/niklay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/nik"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIK"
+                android:textSize="11dp"
+                android:inputType="number"
+                android:enabled="false"
+                android:textStyle="normal"
+                android:id="@+id/nik"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="NIK"
-            android:editable="false"
-            android:layout_below="@id/taginformasiumum"
-            android:inputType="none"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/niklay"
+            android:id="@+id/namalay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/nama"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Nama"
-            android:layout_below="@id/nik"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/namalay"
+            android:layout_marginRight="20dp"
+            android:id="@+id/gelardepanlay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/gelardepan"
-            android:layout_width="160dp"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gelar Depan"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/gelardepan"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Gelar Depan"
-            android:layout_below="@id/nama"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/namalay"
+            android:layout_toRightOf="@+id/gelardepanlay"
+            android:id="@+id/gelarbelakanglay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gelar Belakang"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/gelarbelakang"/>
 
-        <EditText
-            android:id="@+id/gelarbelakang"
-            android:layout_width="170dp"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Gelar Depan"
-            android:layout_below="@id/nama"
-            android:layout_marginLeft="25dp"
-            android:layout_toRightOf="@+id/gelardepan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/gelardepanlay"
+            android:id="@+id/tempatlahirlay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/tempatlahir"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tempat Lahir"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/tempatlahir"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Tempat Lahir"
-            android:layout_below="@id/gelardepan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/tempatlahirlay"
+            android:id="@+id/tanggallahirlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Lahir (Tahun-Bulan-Tanggal)"
+                android:inputType="date"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/tanggallahir"/>
 
-        <EditText
-            android:id="@+id/tanggallahir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Tanggal Lahir (Thn-bln-tgl)"
-            android:layout_below="@id/tempatlahir"
-            android:inputType="date"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+        </android.support.design.widget.TextInputLayout>
 
 
         <LinearLayout
-            android:id="@+id/linearjk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tanggallahir"
-            android:orientation="vertical"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jenis Kelamin?"
-                android:textColor="#000000"
-                android:textSize="14dp"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"/>
-            <RadioGroup
-                android:id="@+id/groupjk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp"
-                android:background="@null"
-                android:padding="3dp"
-                >
-                <RadioButton
-                    android:id="@+id/pria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pria"
-                    android:padding="3dp"
-                    />
-                <RadioButton
-                    android:id="@+id/wanita"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Wanita"
-                    android:padding="3dp"
-                    />
-            </RadioGroup>
+        android:id="@+id/linearjk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tanggallahirlay"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="11dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+        <RadioGroup
+        android:id="@+id/groupjk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        >
+        <RadioButton
+        android:id="@+id/pria"
+        android:textColor="@color/colorPrimary"
+        android:shadowColor="@color/colorPrimary"
+            android:textSize="11dp"
+        android:layout_width="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+        android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+        android:text="Pria"
+        android:padding="3dp"
+        />
+        <RadioButton
+        android:id="@+id/wanita"
+            android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+        android:text="Wanita"
+            android:textSize="11dp"
+        android:padding="3dp"
+        />
+        </RadioGroup>
         </LinearLayout>
 
-
-        <EditText
-            android:id="@+id/agama"
-            android:layout_width="match_parent"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Agama"
-            android:layout_below="@id/linearjk"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/linearjk"
+            android:id="@+id/agamalay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/tinggibadan"
-            android:layout_width="160dp"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Agama"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/agama"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Tinggi Badan"
-            android:layout_below="@id/agama"
-            android:inputType="number"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/agamalay"
+            android:layout_marginRight="20dp"
+            android:id="@+id/tinggibadanlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi Badan"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/tinggibadan"/>
 
-        <EditText
-            android:id="@+id/beratbadan"
-            android:layout_width="170dp"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Berat Badan"
-            android:layout_below="@id/agama"
-            android:layout_marginLeft="25dp"
-            android:layout_toRightOf="@+id/gelardepan"
-            android:inputType="number"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/agamalay"
+            android:layout_toRightOf="@+id/tinggibadanlay"
+            android:id="@+id/beratbadanlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Berat Badan"
+                android:textSize="11dp"
+                android:inputType="text"
+                android:textStyle="normal"
+                android:id="@+id/beratbadan"/>
 
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/hp"
-            android:layout_width="match_parent"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Nomor HP"
-            android:layout_below="@id/tinggibadan"
-            android:inputType="number"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/tinggibadanlay"
+            android:id="@+id/hplay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/kecamatan"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor HP"
+                android:inputType="number"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/hp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Kecamatan"
-            android:layout_below="@id/hp"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/hplay"
+            android:id="@+id/kecamatanlay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/alamat"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kecamatan"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/kecamatan"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Alamat"
-            android:layout_below="@id/kecamatan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/kecamatanlay"
+            android:id="@+id/alamatlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/alamat"/>
 
-        <TextView
-            android:id="@+id/tagpendidikan"
-            android:layout_width="match_parent"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="- Pendidikan dan Keterampilan"
-            android:layout_below="@id/alamat"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="5dp"/>
+            android:layout_below="@+id/alamatlay"
+            android:id="@+id/keterampilanlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Keterampilan"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/keterampilan"/>
 
-        <EditText
-            android:id="@+id/keterampilan"
-            android:layout_width="match_parent"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Keterampilan"
-            android:layout_below="@id/tagpendidikan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/keterampilanlay"
+            android:id="@+id/pendidikanlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pendidikan Terakhir"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/pendidikan"/>
 
-        <EditText
-            android:id="@+id/pendidikan"
-            android:layout_width="match_parent"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Pendidikan Terkahir"
-            android:layout_below="@id/keterampilan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/pendidikanlay"
+            android:id="@+id/jurusanlay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jurusan"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/jurusan"/>
 
-        <EditText
-            android:id="@+id/jurusan"
-            android:layout_width="match_parent"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Jurusan"
-            android:layout_below="@id/pendidikan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/jurusanlay"
+            android:id="@+id/instansilay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/institusi"
-            android:layout_width="match_parent"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Instansi Pendidikan"
+                android:inputType="text"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/institusi"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Nama Instansi Pendidikan"
-            android:layout_below="@id/jurusan"
-            android:inputType="text"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+            android:layout_below="@+id/instansilay"
+            android:layout_marginRight="20dp"
+            android:id="@+id/lamastudilay"
+            android:theme="@style/TextLabel">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lama Studi"
+                android:textSize="11dp"
+                android:inputType="numberDecimal"
+                android:textStyle="normal"
+                android:id="@+id/lamastudi"/>
 
-        <EditText
-            android:id="@+id/lamastudi"
-            android:layout_width="160dp"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Lama Studi"
-            android:layout_below="@id/institusi"
-            android:inputType="date"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/instansilay"
+            android:layout_toRightOf="@+id/lamastudilay"
+            android:id="@+id/tahunluluslay"
+            android:theme="@style/TextLabel">
 
-        <EditText
-            android:id="@+id/tahunlulus"
-            android:layout_width="160dp"
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tahun Lulus"
+                android:textSize="11dp"
+                android:inputType="number"
+                android:textStyle="normal"
+                android:id="@+id/tahunlulus"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="Tahun Lulus"
-            android:layout_below="@id/institusi"
-            android:layout_toRightOf="@id/lamastudi"
-            android:inputType="number"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:layout_marginLeft="25dp"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textStyle="normal" />
+            android:layout_below="@+id/lamastudilay"
+            android:id="@+id/nilailay"
+            android:theme="@style/TextLabel">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai / IPK"
+                android:inputType="numberDecimal"
+                android:textSize="11dp"
+                android:textStyle="normal"
+                android:id="@+id/nilai"/>
+
+        </android.support.design.widget.TextInputLayout>
 
 
-        <EditText
-            android:id="@+id/nilai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#efefef"
-            android:hint="Nilai / IPK"
-            android:layout_below="@id/lamastudi"
-            android:inputType="date"
-            android:padding="5dp"
-            android:paddingTop="5dp"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textStyle="normal" />
+
+
 
 
 
@@ -444,10 +456,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simpan Data"
-            android:layout_below="@+id/nilai"
+            android:layout_below="@+id/nilailay"
             android:textColor="#ffffff"
+            android:textSize="11dp"
             android:layout_marginTop="15dp"
-            android:background="#747474"/>
+            android:background="@color/colorPrimary"/>
 
 
         <EditText
