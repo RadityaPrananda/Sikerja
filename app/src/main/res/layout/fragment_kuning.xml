@@ -36,19 +36,26 @@
         android:id="@+id/formkartu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Form Kartu Pencari Kerja"
+        android:text="Form Pengajuan Kartu Pencari Kerja"
         android:gravity="center"
         android:textSize="13dp"
             android:layout_marginBottom="10dp"
         android:textStyle="bold"
         android:textColor="#000000"/>
 
+        <ImageView
+            android:id="@+id/imgkayong"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/splash"
+            android:layout_below="@id/formkartu"/>
+
 
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/formkartu"
+            android:layout_below="@+id/imgkayong"
             android:id="@+id/niklay"
             android:theme="@style/TextLabel">
 
@@ -56,7 +63,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="NIK"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="number"
                 android:enabled="false"
                 android:textStyle="normal"
@@ -75,7 +82,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/nama"/>
@@ -94,7 +101,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Gelar Depan"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/gelardepan"/>
@@ -113,7 +120,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Gelar Belakang"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/gelarbelakang"/>
@@ -131,7 +138,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tempat Lahir"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/tempatlahir"/>
@@ -150,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Tanggal Lahir (Tahun-Bulan-Tanggal)"
                 android:inputType="date"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/tanggallahir"/>
 
@@ -171,7 +178,7 @@
         android:layout_height="wrap_content"
         android:text="Jenis Kelamin?"
         android:textColor="@color/colorPrimary"
-        android:textSize="11dp"
+        android:textSize="12dp"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"/>
         <RadioGroup
@@ -185,7 +192,7 @@
         android:id="@+id/pria"
         android:textColor="@color/colorPrimary"
         android:shadowColor="@color/colorPrimary"
-            android:textSize="11dp"
+            android:textSize="12dp"
         android:layout_width="wrap_content"
             android:buttonTint="@color/colorPrimary"
         android:layout_height="wrap_content"
@@ -237,7 +244,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tinggi Badan"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/tinggibadan"/>
@@ -256,7 +263,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Berat Badan"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="text"
                 android:textStyle="normal"
                 android:id="@+id/beratbadan"/>
@@ -275,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nomor HP"
                 android:inputType="number"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/hp"/>
 
@@ -293,7 +300,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Kecamatan"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/kecamatan"/>
 
@@ -311,7 +318,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/alamat"/>
 
@@ -329,7 +336,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Keterampilan"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/keterampilan"/>
 
@@ -347,7 +354,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Pendidikan Terakhir"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/pendidikan"/>
 
@@ -365,7 +372,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Jurusan"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/jurusan"/>
 
@@ -383,7 +390,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nama Instansi Pendidikan"
                 android:inputType="text"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/institusi"/>
 
@@ -401,7 +408,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Lama Studi"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="numberDecimal"
                 android:textStyle="normal"
                 android:id="@+id/lamastudi"/>
@@ -420,7 +427,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tahun Lulus"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:inputType="number"
                 android:textStyle="normal"
                 android:id="@+id/tahunlulus"/>
@@ -439,7 +446,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nilai / IPK"
                 android:inputType="numberDecimal"
-                android:textSize="11dp"
+                android:textSize="12dp"
                 android:textStyle="normal"
                 android:id="@+id/nilai"/>
 
@@ -458,7 +465,7 @@
             android:text="Simpan Data"
             android:layout_below="@+id/nilailay"
             android:textColor="#ffffff"
-            android:textSize="11dp"
+            android:textSize="12dp"
             android:layout_marginTop="15dp"
             android:background="@color/colorPrimary"/>
 
